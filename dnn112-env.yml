@@ -1,0 +1,15 @@
+name: dnn112-env
+channels:
+- defaults
+- conda-forge
+- floydhub
+dependencies:
+- python=3.6
+- pip
+- numpy
+- tensorflow>=1.12
+- keras
+- matplotlib
+- Pillow
+- floyd-cli
+

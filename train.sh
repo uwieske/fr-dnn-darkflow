@@ -6,9 +6,9 @@ DATASET_DIR='/Users/uwieske/ukrec-res/ukrec-images/images_train/images/'
 ANNOTATION_DIR='/Users/uwieske/ukrec-res/ukrec-images/images_train/annotations/'
 LABELS_FILE='/Users/uwieske/ukrec-res/labels.txt'
 THRESHOLD=0.1
-LOAD_WEIGHTS_FILE='/Users/uwieske/darkflow-res/darkflow/yolo.weights'
-BATCH_SIZE=2
-EPOCH_COUNT=8
+LOAD_WEIGHTS_FILE='/Users/uwieske/ukrec-res/yolo.weights'
+BATCH_SIZE=8
+EPOCH_COUNT=2
 SUMMARY_FOLDER='/Users/uwieske/ukrec-res/summary/'
 
 # Train command

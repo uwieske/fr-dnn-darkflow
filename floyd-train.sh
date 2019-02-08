@@ -7,8 +7,8 @@ ANNOTATION_DIR='/floyd/input/ukrec-images/images_train/annotations/'
 LABELS_FILE='../labels.txt'
 THRESHOLD=0.1
 LOAD_WEIGHTS_FILE='/floyd/input/soccer_ballgame/yolo.weights'
-BATCH_SIZE=8
-EPOCH_COUNT=2
+BATCH_SIZE=4
+EPOCH_COUNT=1
 SUMMARY_FOLDER='summary/'
 
 # Train command

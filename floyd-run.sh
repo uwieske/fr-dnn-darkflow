@@ -1,5 +1,7 @@
 #!/bin/sh
 cd darkflow
-pip install -e .
+#pip install -e .
+python3 setup.py build_ext --inplace
 cd ..
-floyd run --task train
+floyd run flow --help
+#floyd run --task train

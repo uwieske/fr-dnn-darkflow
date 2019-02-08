@@ -13,5 +13,6 @@ SUMMARY_FOLDER='summary/'
 
 # Train command
 #--config $CONFIG_DIR
-/floyd/home/darkflow/flow --train --model $MODEL_CONFIG_FILE --dataset $DATASET_DIR --annotation $ANNOTATION_DIR --labels $LABELS_FILE --threshold $THRESHOLD --load $LOAD_WEIGHTS_FILE --batch $BATCH_SIZE --epoch $EPOCH_COUNT --summary $SUMMARY_FOLDER  --json --savepb
+cd /floyd/home/darkflow
+flow --train --model $MODEL_CONFIG_FILE --dataset $DATASET_DIR --annotation $ANNOTATION_DIR --labels $LABELS_FILE --threshold $THRESHOLD --load $LOAD_WEIGHTS_FILE --batch $BATCH_SIZE --epoch $EPOCH_COUNT --summary $SUMMARY_FOLDER  --json --savepb
 

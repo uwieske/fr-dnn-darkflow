@@ -1,0 +1,63 @@
+# see: https://docs.floydhub.com/floyd_config
+# All supported configs:
+#
+#machine: cpu
+#env: tensorflow-1.12
+#input:
+#  - destination: input
+#    source: foo/datasets/yelp-food/1
+#  - foo/datasets/yelp-food-test/1:test
+#description: this is a test
+#max_runtime: 3600
+#command: python train.py
+
+# You can also define multiple tasks to use with --task argument:
+#
+#task:
+#  evaluate:
+#    machine: gpu
+#    command: python evaluate.py
+#
+#  serve:
+#    machine: cpu
+#    mode: serve
+
+machine: cpu
+env: tensorflow-1.12
+
+task:
+  train:
+    machine: cpu
+    description: train the model
+    input:
+      - source: uwieske/datasets/ukrec-images/5
+        destination: ukrec-images
+      - source: uwieske/datasets/soccer_ballgame/2
+        destination: soccer_ballgame
+    command: bash start_setup_darkflow.sh && cd fr-dnn-darkflow && python ../floyd-train.py
+#  test:
+#    machine: cpu
+#    description: test the model
+#    input:
+#      - source: uwieske/datasets/ukrec-images/5
+#        destination: ukrec-images
+#      - source: uwieske/datasets/soccer_ballgame/2
+#        destination: soccer_ballgame
+#    command: bash start_setup_darkflow.sh && cd darkflow && python predict.py
+
+#  test:
+#    machine: gpu
+#    description: evaluate model1
+#    input:
+#      - source: foo/projects/nlp
+#        destination: model
+#      - source: foo/datasets/wine-reviews-test/1
+#        destination: test
+#    command: test.py --model /floyd/input/model --data /floyd/input/test
+
+#  serve:
+#    machine: cpu
+#    mode: serve
+#    input:
+#      - source: foo/projects/nlp
+#        destination: model

@@ -34,7 +34,7 @@ task:
         destination: ukrec-images
       - source: uwieske/datasets/soccer_ballgame/2
         destination: soccer_ballgame
-    command: cd darkflow && chmod +x flow && bash ../floyd-train.sh
+    command: cd darkflow && pip install -e . && chmod +x flow && bash ../floyd-train.sh
 #  test:
 #    machine: cpu
 #    description: test the model

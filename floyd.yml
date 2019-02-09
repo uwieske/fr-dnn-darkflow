@@ -35,15 +35,17 @@ task:
       - source: uwieske/datasets/soccer_ballgame/2
         destination: soccer_ballgame
     command: cd darkflow && pip install -e . && chmod +x flow && bash ../floyd-train.sh
-#  test:
-#    machine: cpu
-#    description: test the model
-#    input:
-#      - source: uwieske/datasets/ukrec-images/5
-#        destination: ukrec-images
-#      - source: uwieske/datasets/soccer_ballgame/2
-#        destination: soccer_ballgame
-#    command: bash start_setup_darkflow.sh && cd darkflow && python predict.py
+  test:
+    machine: cpu
+    description: test the model
+    input:
+      - source: uwieske/datasets/ukrec-images/5
+        destination: ukrec-images
+      - source: uwieske/datasets/soccer_ballgame/2
+        destination: soccer_ballgame
+      - source: uwieske/projects/fr-dnn-darkflow/35
+        destination:
+    command: cd darkflow && pip install -e . && chmod +x flow && bash ../floyd-test.sh
 
 #  test:
 #    machine: gpu

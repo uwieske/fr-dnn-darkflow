@@ -43,8 +43,6 @@ task:
         destination: ukrec-images
       - source: uwieske/datasets/soccer_ballgame/2
         destination: soccer_ballgame
-      - source: uwieske/projects/fr-dnn-darkflow/35
-        destination:
     command: cd darkflow && pip install -e . && chmod +x flow && bash ../floyd-test.sh
 
 #  test:

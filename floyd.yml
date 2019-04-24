@@ -44,6 +44,22 @@ task:
       - source: uwieske/datasets/soccer_ballgame/2
         destination: soccer_ballgame
     command: cd darkflow && pip install -e . && chmod +x flow && bash ../floyd-test.sh
+  serveapi:
+    machine: cpu
+    description: test the model via API
+    input:
+      - source: uwieske/datasets/backupjob66/1
+        destination: model66
+    command: pip install -e . && chmod +x flow
+#    command: cd darkflow && pip install -e . && chmod +x flow && cd /floyd/home && export PYTHONPATH=$PYTHONPATH:/floyd/home:/floyd/home/darkflow && bash floyd-serve.sh
+  deployonly:
+    machine: cpu
+    description: deploy only model
+    input:
+      - source: uwieske/datasets/backupjob66/1
+        destination: model66
+    command: pip install -e . && chmod +x flow
+#    command: cd darkflow && pip install -e . && chmod +x flow && cd /floyd/home && export PYTHONPATH=$PYTHONPATH:/floyd/home:/floyd/home/darkflow && bash floyd-serve.sh
 
 #  test:
 #    machine: gpu

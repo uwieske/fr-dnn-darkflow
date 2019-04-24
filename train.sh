@@ -16,5 +16,5 @@ MOMENTUM=0.9
 
 # Train command
 #--config $CONFIG_DIR
-flow --train --trainer adam --load -1 --lr $LEARNING_RATE --momentum $MOMENTUM --epoch $EPOCH_COUNT  --model $MODEL_CONFIG_FILE --dataset $DATASET_DIR --annotation $ANNOTATION_DIR --labels $LABELS_FILE --batch $BATCH_SIZE  --summary $SUMMARY_FOLDER  --json --savepb
+darkflow/flow --train --trainer adam --load -1 --lr $LEARNING_RATE --momentum $MOMENTUM --epoch $EPOCH_COUNT  --model $MODEL_CONFIG_FILE --dataset $DATASET_DIR --annotation $ANNOTATION_DIR --labels $LABELS_FILE --batch $BATCH_SIZE  --summary $SUMMARY_FOLDER  --json --savepb
 

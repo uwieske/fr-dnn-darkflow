@@ -17,5 +17,5 @@ BACKUP='/floyd/input/model/darkflow/ckpt/'
 # Train command
 #--config $CONFIG_DIR
 cd /floyd/home/darkflow
-flow --train --trainer adam --batch $BATCH_SIZE --gpu 1.0 --model $MODEL_CONFIG_FILE --dataset $DATASET_DIR --annotation $ANNOTATION_DIR --labels $LABELS_FILE --backup $BACKUP -load $LOAD_WEIGHTS_FILE --summary $SUMMARY_FOLDER --json --savepb --lr 0.0000003
+darkflow/flow --train --trainer adam --batch $BATCH_SIZE --gpu 1.0 --model $MODEL_CONFIG_FILE --dataset $DATASET_DIR --annotation $ANNOTATION_DIR --labels $LABELS_FILE --backup $BACKUP -load $LOAD_WEIGHTS_FILE --summary $SUMMARY_FOLDER --json --savepb --lr 0.0000003
 

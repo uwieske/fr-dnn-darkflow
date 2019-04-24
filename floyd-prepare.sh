@@ -1,4 +1,4 @@
 #!/bin/sh
-
-floyd init uwieske/fr-dnn-darkflow
+FLOYD_PROJECT=$1
+floyd init $FLOYD_PROJECT
 
